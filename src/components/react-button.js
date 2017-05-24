@@ -4,8 +4,6 @@ import React,{PureComponent} from 'react';
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'noop';
-import objectAssign from 'object-assign';
 
 export default class extends PureComponent{
   /*===properties start===*/
@@ -29,11 +27,6 @@ export default class extends PureComponent{
     full:false,
   };
   /*===properties end===*/
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
   render(){
     const {className,children,color,size,round,full,outline,...props} = this.props;
