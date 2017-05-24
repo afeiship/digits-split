@@ -1,0 +1,68 @@
+$react-button-colors: (
+  primary:    #387ef5,
+  secondary:  #32db64,
+  wxgreen:    #1aad19
+);
+
+.react-button{
+  border:none;
+  background: none;
+  border-radius: .4em;
+  &:focus{
+    outline: none;
+  }
+
+  padding:1em 2em;
+
+  //size:
+  &[data-size=small]{
+    font-size:8px;
+  }
+
+  &[data-size=normal]{
+    font-size:12px;
+  }
+
+  &[data-size=large]{
+    font-size:16px;
+  }
+
+
+  //round:
+  &[data-round=true]{
+    border-radius: 100px;
+  }
+
+  &[data-round=false]{
+    border-radius: 0;
+  }
+
+  //full:
+  &[data-full=true]{
+    display: block;
+    width:100%;
+  }
+
+  //theme:
+  @each $name,$color in $react-button-colors{
+    &[data-color=#{$name}]{
+      background: $color;
+      color:#fff;
+      border:1px solid $color;
+      &:active{
+        background: darken($color,10%);
+      }
+
+      &[data-outline=true]{
+        background: #fff;
+        color:$color;
+
+        &:active{
+          color:#fff;
+          background: lighten($color,10%);
+        }
+      }
+    }
+  }
+
+}
