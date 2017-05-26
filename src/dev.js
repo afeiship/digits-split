@@ -15,16 +15,16 @@ class App extends React.Component{
           normal button
         </ReactButton>
         <div className="blank-20"></div>
-        <ReactButton full={true} color='wxgreen'>
-          normal/wegreen button
+        <ReactButton full={true} color='wechat'>
+          normal/wechat button
         </ReactButton>
         <div className="blank-20"></div>
         <ReactButton color='primary' size='large'>
           primary button
         </ReactButton>
         <div className="blank-20"></div>
-        <ReactButton full={true} round={true} color='primary' size='large'>
-          primary/full button
+        <ReactButton full round color='secondary' size='large'>
+          primary/full button---full
         </ReactButton>
 
         <div className="blank-20"></div>

@@ -23,7 +23,6 @@ export default class extends PureComponent{
   static defaultProps = {
     size:'normal',
     color:'primary',
-    outline:false,
     full:false,
   };
   /*===properties end===*/
