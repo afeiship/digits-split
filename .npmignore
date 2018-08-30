@@ -1,9 +1,5 @@
 build
+node_modules
 src
-config
-static
-.babelrc
-.gitignore
-yarn.lock
+docs
 test
-index.html
