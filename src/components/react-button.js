@@ -12,7 +12,7 @@ export default class extends PureComponent{
       'normal',
       'large'
     ]),
-    type:PropTypes.string,
+    theme:PropTypes.string,
     outline:PropTypes.bool,
     round:PropTypes.bool,
     full:PropTypes.bool,
@@ -20,22 +20,20 @@ export default class extends PureComponent{
 
   static defaultProps = {
     size:'normal',
-    type:'primary',
+    theme:'primary',
     full:false,
   };
   /*===properties end===*/
 
   render(){
-    const {className,children,type,size,round,full,outline,...props} = this.props;
+    const { className, theme, size, round, full, outline, ...props } = this.props;
     return (
-      <button {...props}
-      data-round={round}
-      data-full={full}
-      data-size={size}
-      data-outline={outline}
-      data-type={type} className={classNames('react-button',className)}>
-        {children}
-      </button>
+      <button 
+        data-round={round}
+        data-full={full}
+        data-size={size}
+        data-outline={outline}
+        data-theme={theme} className={classNames('react-button',className)} {...props}/>
     );
   }
 }

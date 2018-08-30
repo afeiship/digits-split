@@ -7,32 +7,32 @@ class App extends React.Component{
   render(){
     return (
       <div className="hello-react-button" >
-        <ReactButton type='primary' size='small'>
+        <ReactButton theme='primary' size='small'>
           primary button
         </ReactButton>
 
-        <ReactButton type='secondary' size='normal'>
+        <ReactButton theme='secondary' size='normal'>
           normal button
         </ReactButton>
         <div className="blank-20"></div>
-        <ReactButton full={true} type='test'>
+        <ReactButton full={true} theme='wechat' round={false}>
           normal/wechat button
         </ReactButton>
         <div className="blank-20"></div>
-        <ReactButton type='primary' size='large'>
+        <ReactButton theme='primary' size='large'>
           primary button
         </ReactButton>
         <div className="blank-20"></div>
-        <ReactButton full round type='secondary' size='large'>
+        <ReactButton full round theme='secondary' size='large'>
           primary/full button---full
         </ReactButton>
 
         <div className="blank-20"></div>
-        <ReactButton type='primary' size='small' outline={true}>
+        <ReactButton theme='primary' size='small' outline={true}>
           primary button
         </ReactButton>
 
-        <ReactButton type='secondary' size='normal' outline={true}>
+        <ReactButton theme='secondary' size='normal' outline={true}>
           normal button
         </ReactButton>
 

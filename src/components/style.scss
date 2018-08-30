@@ -1,10 +1,30 @@
 $react-button-options: (
-  primary:    #387ef5,
-  secondary:  #32db64,
-  wechat:    #1aad19
-)!default;
+  padding: 1em 2em,
+  theme-map:(
+    primary:#387ef5,
+    secondary:#ff2d55,
+    wechat:#1aad19
+  ),
+  size-map:(
+    small: 10px,
+    normal: 16px,
+    large: 20px,
+  ),
+  amount-map:(
+    darkent: 10%,
+    lighten: 10%
+  )
+);
+// CAN NOT use default, maybe is node-sass's bug:
 
 .react-button{
+
+  $padding: map-get($map: $react-button-options, $key: padding );
+  $theme-map: map-get($map: $react-button-options, $key: theme-map );
+  $size-map: map-get($map: $react-button-options, $key: size-map );
+  $amount-map: map-get($map: $react-button-options, $key: amount-map );
+
+  //reset:
   border:none;
   background: none;
   user-select: none;
@@ -12,21 +32,7 @@ $react-button-options: (
   &:focus{
     outline: none;
   }
-
-  padding:1em 2em;
-
-  //size:
-  &[data-size=small]{
-    font-size:8px;
-  }
-
-  &[data-size=normal]{
-    font-size:12px;
-  }
-
-  &[data-size=large]{
-    font-size:16px;
-  }
+  padding:$padding;
 
   //round:
   border-radius: .4em;
@@ -44,23 +50,31 @@ $react-button-options: (
     width:100%;
   }
 
-  //theme:
-  @each $name,$type in $react-button-options{
-    &[data-type=#{$name}]{
-      background: $type;
+  //size:
+  @each $size, $font-size in $size-map{
+    &[data-size=#{$size}]{
+      font-size:$font-size;
+    }
+  }
+
+  // theme:
+  @each $name,$theme in $theme-map{
+    @debug $name, $theme;
+    &[data-theme=#{$name}]{
+      background: $theme;
       color:#fff;
-      border:1px solid $type;
+      border:1px solid $theme;
       &:active{
-        background: darken($type,10%);
+        background: darken($theme,8%);
       }
 
       &[data-outline=true]{
         background: #fff;
-        color:$type;
+        color:$theme;
 
         &:active{
           color:#fff;
-          background: lighten($type,10%);
+          background: lighten($theme,8%);
         }
       }
     }
