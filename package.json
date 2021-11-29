@@ -1,6 +1,6 @@
 {
   "name": "@jswork/digits-split",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Digits split to standard numers.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -37,5 +37,15 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "homepage": "https://js.work",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afeiship/digits-split.git"
+  },
+  "keywords": [
+    "digits-split",
+    "number",
+    "num"
+  ]
 }
