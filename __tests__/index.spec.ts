@@ -1,6 +1,6 @@
 import fn from '../src';
 
-describe('api.basic', () => {
+describe('Normal test cases', () => {
   test('number is equal 0/10/100/1000/10000', () => {
     expect(fn(0)).toEqual([0]);
     expect(fn(10)).toEqual([10, 0]);
