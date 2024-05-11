@@ -3,15 +3,13 @@
     "requireCleanWorkingDir": false
   },
   "hooks": {
-    "after:init": [
-      "npm run test",
-      "t2k"
-    ],
-    "after:bump": [
-      "npm run build"
-    ]
+    "before:init": ["yarn run test"],
+    "after:init": ["t2k"],
+    "after:bump": ["yarn run build"],
+    "after:release": ["yarn pkg get name | cnpm sync"]
   },
   "github": {
-    "release": true
+    "release": true,
+    "proxy": "http://127.0.0.1:9090"
   }
 }
