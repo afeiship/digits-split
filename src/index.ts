@@ -2,7 +2,7 @@
 // quotient 商
 // remainder 余数
 
-const fn = (inNumber): number[] => {
+const fn = (inNumber: number | string): number[] => {
   const str = String(inNumber);
   const rdx = str.length - 1;
   return str.split('').map((n: string, idx) => {
