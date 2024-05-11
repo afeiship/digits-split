@@ -1,6 +1,6 @@
 {
   "name": "@jswork/digits-split",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Digits split to standard numers.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
